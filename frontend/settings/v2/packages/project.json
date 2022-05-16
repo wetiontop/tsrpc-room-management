@@ -1,0 +1,17 @@
+{
+  "general": {
+    "designResolution": {
+      "width": 750,
+      "height": 1334,
+      "fitWidth": false,
+      "fitHeight": true
+    }
+  },
+  "physics": {
+    "defaultMaterial": {
+      "friction": 0.9,
+      "rollingFriction": 0.9,
+      "spinningFriction": 0.9
+    }
+  }
+}

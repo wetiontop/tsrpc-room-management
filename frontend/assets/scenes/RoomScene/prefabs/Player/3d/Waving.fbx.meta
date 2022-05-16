@@ -1,0 +1,79 @@
+{
+  "ver": "2.1.10",
+  "importer": "fbx",
+  "imported": true,
+  "uuid": "1a5ef326-f4e3-4799-93bf-4dffdfc9cf1a",
+  "files": [
+    "__original-animation-0.cconb"
+  ],
+  "subMetas": {
+    "95723": {
+      "importer": "gltf-scene",
+      "uuid": "1a5ef326-f4e3-4799-93bf-4dffdfc9cf1a@95723",
+      "displayName": "",
+      "id": "95723",
+      "name": "Waving.prefab",
+      "userData": {
+        "gltfIndex": 0
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "a9604": {
+      "importer": "gltf-animation",
+      "uuid": "1a5ef326-f4e3-4799-93bf-4dffdfc9cf1a@a9604",
+      "displayName": "",
+      "id": "a9604",
+      "name": "wave.animation",
+      "userData": {
+        "gltfIndex": 0,
+        "wrapMode": 1,
+        "sample": 30,
+        "span": {
+          "from": 0.63,
+          "to": 4.733333110809326
+        },
+        "events": []
+      },
+      "ver": "1.0.16",
+      "imported": true,
+      "files": [
+        ".cconb"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "imageMetas": [],
+    "legacyFbxImporter": false,
+    "animationImportSettings": [
+      {
+        "name": "mixamo.com",
+        "duration": 4.733333110809326,
+        "fps": 30,
+        "splits": [
+          {
+            "name": "wave",
+            "from": 0.63,
+            "to": 4.733333110809326,
+            "wrapMode": 1
+          }
+        ]
+      }
+    ],
+    "redirect": "1a5ef326-f4e3-4799-93bf-4dffdfc9cf1a@95723",
+    "assetFinder": {
+      "meshes": [],
+      "skeletons": [],
+      "textures": [],
+      "materials": [],
+      "scenes": [
+        "1a5ef326-f4e3-4799-93bf-4dffdfc9cf1a@95723"
+      ]
+    }
+  }
+}

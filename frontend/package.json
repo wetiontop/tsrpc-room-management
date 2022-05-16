@@ -1,0 +1,16 @@
+{
+  "name": "frontend",
+  "uuid": "9f97a2fc-568d-427f-ac1f-056f2d6f43f1",
+  "version": "3.4.2",
+  "creator": {
+    "version": "3.4.2"
+  },
+  "scripts": {
+    "postinstall": "cd ../backend && npm i && npm run sync"
+  },
+  "description": "TSRPC 房间管理",
+  "dependencies": {
+    "tsrpc-browser": "^3.3.0",
+    "tsrpc-miniapp": "^3.3.0"
+  }
+}

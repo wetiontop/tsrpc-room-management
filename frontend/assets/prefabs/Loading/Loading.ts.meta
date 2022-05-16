@@ -1,0 +1,12 @@
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+  "uuid": "c4c6e1c8-450b-4a1b-abe6-f8d979df60bc",
+  "files": [],
+  "subMetas": {},
+  "userData": {
+    "moduleId": "project:///assets/prefabs/Loading/Loading.js",
+    "simulateGlobals": []
+  }
+}
