@@ -1,12 +1,20 @@
 import { WECHAT } from 'cc/env';
 import { HttpClient as HttpClient_Browser, WsClient as WsClient_Browser } from 'tsrpc-browser';
 import { HttpClient as HttpClient_Miniapp, WsClient as WsClient_Miniapp } from 'tsrpc-miniapp';
+import { serviceProto as serviceProto_auth } from '../shared/protocols/serviceProto_authServer';
 import { serviceProto as serviceProto_match } from '../shared/protocols/serviceProto_matchServer';
 import { serviceProto as serviceProto_room, ServiceType as ServiceType_Room } from '../shared/protocols/serviceProto_roomServer';
 import { FrontConfig } from './FrontConfig';
 
 /** 网络请求相关 */
 export class NetUtil {
+
+    /** Auth Server */
+    static authClient = new (WECHAT ? HttpClient_Miniapp : HttpClient_Browser)(serviceProto_auth, {
+        server: FrontConfig.authServer,
+        // json: true,
+        logger: console
+    });
 
     /** Match Server */
     static matchClient = new (WECHAT ? HttpClient_Miniapp : HttpClient_Browser)(serviceProto_match, {

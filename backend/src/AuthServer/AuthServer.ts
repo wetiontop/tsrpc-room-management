@@ -1,7 +1,7 @@
 import path from "path";
 import { HttpServer } from "tsrpc";
 import { useAdminToken } from "../models/flows/useAdminToken";
-import { serviceProto } from "../shared/protocols/serviceProto_matchServer";
+import { serviceProto } from "../shared/protocols/serviceProto_authServer";
 
 export interface AuthServerOptions {
     port: number

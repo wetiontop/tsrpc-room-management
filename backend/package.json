@@ -5,6 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "node scripts/dev.js",
+    "dev:auth": "tsrpc-cli dev --entry src/authServer.ts",
+    "dev:hall": "tsrpc-cli dev --entry src/hallServer.ts",
     "dev:match": "tsrpc-cli dev --entry src/matchServer.ts",
     "dev:room": "tsrpc-cli dev --entry src/roomServer.ts",
     "dev:room2": "cross-env PORT=3002 tsrpc-cli dev --entry src/roomServer.ts",
