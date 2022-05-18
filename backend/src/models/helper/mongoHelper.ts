@@ -6,3 +6,12 @@
  * @FilePath: \backend\src\models\helper\mongoHelper.ts
  * @Description: 
  */
+
+import { Db, MongoClient } from "mongodb";
+import { Logger } from "tsrpc";
+
+export async function connect(url: string, dbName?: string): Promise<Db> {
+    const client = new MongoClient(url);
+    await client.connect();
+    return client.db(dbName);
+};

@@ -37,7 +37,7 @@ export class LoginScene extends Component {
         let account = this.edtAccount?.string || '';
         let password = this.edtPassword?.string || '';
 
-        let ret = await NetUtil.authClient.callApi('Register', { account, password });
+        let ret = await NetUtil.authClient.callApi('Register', { account, password: this.encrypt(password) });
         if (ret.isSucc) {
             localStorage.setItem('token', ret.res.token);
         } else {

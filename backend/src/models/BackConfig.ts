@@ -10,6 +10,8 @@ export const BackConfig = {
 
     adminToken: 'AAABBBCCC',
 
+    dbUrl: 'mongodb://localhost:27017/test',
+
     roomServer: {
         /** 发送房间状态的时间间隔 */
         intervalSendState: 3000,
