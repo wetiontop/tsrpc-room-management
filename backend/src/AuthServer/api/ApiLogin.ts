@@ -1,10 +1,8 @@
 import { ApiCall } from "tsrpc";
 import { ReqLogin, ResLogin } from "../../shared/protocols/authServer/PtlLogin";
+import jwt from "jsonwebtoken";
 
 export async function ApiLogin(call: ApiCall<ReqLogin, ResLogin>) {
-    // TODO
-    // call.error('API Not Implemented');
-    console.log(call.req);
     if (!call.req.account) {
         call.error('account is required');
     }
@@ -13,5 +11,9 @@ export async function ApiLogin(call: ApiCall<ReqLogin, ResLogin>) {
         call.error('password is required');
     }
 
-    call.succ({token: 'xxxxxxxxxxxx'});
+    const tokenStr = jwt.sign({account: call.req.account}, 'secret', {
+        expiresIn: '1h',
+        algorithm: 'HS256'
+    });
+    call.succ({token: `Bearer ${tokenStr}`});
 }

@@ -11,17 +11,27 @@ export class LoginScene extends Component {
     @property(EditBox)
     edtPassword?: EditBox;
 
-    onClickLogin() {
+    async onClickLogin() {
         let account = this.edtAccount?.string || '';
         let password = this.edtPassword?.string || '';
 
-        NetUtil.authClient.callApi('Login', { account, password });
+        let ret = await NetUtil.authClient.callApi('Login', { account, password });
+        if (ret.isSucc) {
+            localStorage.setItem('token', ret.res.token);
+        } else {
+            console.log(ret.err);
+        }
     }
 
-    onClickRegister() {
+    async onClickRegister() {
         let account = this.edtAccount?.string || '';
         let password = this.edtPassword?.string || '';
 
-        NetUtil.authClient.callApi('Register', { account, password });
+        let ret = await NetUtil.authClient.callApi('Register', { account, password });
+        if (ret.isSucc) {
+            localStorage.setItem('token', ret.res.token);
+        } else {
+            console.log(ret.err);
+        }
     }
 }

@@ -18,6 +18,8 @@
     "api": "tsrpc-cli api"
   },
   "dependencies": {
+    "express-jwt": "^7.7.1",
+    "jsonwebtoken": "^8.5.1",
     "tsrpc": "^3.3.1",
     "uuid": "^8.3.2"
   },

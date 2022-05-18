@@ -2,7 +2,6 @@ import { ApiCall } from "tsrpc";
 import { ReqRegister, ResRegister } from "../../shared/protocols/authServer/PtlRegister";
 
 export async function ApiRegister(call: ApiCall<ReqRegister, ResRegister>) {
-    console.log(call.req);
     if (!call.req.account) {
         call.error('account is required');
     }
