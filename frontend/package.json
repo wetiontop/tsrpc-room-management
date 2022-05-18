@@ -10,6 +10,7 @@
   },
   "description": "TSRPC 房间管理",
   "dependencies": {
+    "jsencrypt": "^3.2.1",
     "tsrpc-browser": "^3.3.0",
     "tsrpc-miniapp": "^3.3.0"
   }

@@ -20,6 +20,8 @@
   "dependencies": {
     "express-jwt": "^7.7.1",
     "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.6.0",
+    "mongoose": "^6.3.3",
     "tsrpc": "^3.3.1",
     "uuid": "^8.3.2"
   },
